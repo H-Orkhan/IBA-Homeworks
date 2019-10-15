@@ -20,4 +20,29 @@ public class Homework_1 {
             if (a[i] == number) {
                 System.out.printf("Congratulations,%s\n", name);
                 count = i + 1;
-                break; } }}}
+                break; } }
+       show (a,count);
+        System.out.println("\n*******************Buble sort**************");
+        buble_sort(a,count);
+        show (a,count);
+    }
+
+    private static void buble_sort(int[] a,int count) {
+        int temp;
+        for (int i = 0; i <count; i++) {
+            for (int j = 1; j < (count-i) ; j++) {
+                if (a[j - 1] < a[j]) {
+                    temp = a[j - 1];
+                    a[j - 1] = a[j];
+                    a[j] = temp; }}}
+    }
+
+    private static void show(int[] a,int count) {
+        for (int i = 0;i<count;i++)
+        {
+            System.out.printf("%d     ",a[i]);
+        }
+    }
+}
+
+
