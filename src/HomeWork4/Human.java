@@ -8,7 +8,7 @@ public class Human {
     Pet pet;
     Human mother;
     Human father;
-    static String [][] scedule = new String [7][2];
+    static String [][] schedule = new String [7][2];
 
     public Human () {}
 
@@ -25,24 +25,24 @@ public class Human {
         this.pet = pet;
         this.mother = mother;
         this.father = father;
-        generateScedule();
+        generateSchedule();
     }
 
-    private void generateScedule() {{
-            scedule[0][0] = "Sunday";
-            scedule[0][1] = "do home work";
-            scedule[1][0] = "Monday";
-            scedule[1][1] = "go to courses; watch a film";
-            scedule[2][0] = "Tuesday";
-            scedule[2][1] = "go to university; have a rest";
-            scedule[3][0] = "Wednesday";
-            scedule[3][1] = "go to courses;listen music";
-            scedule[4][0] = "Thursday";
-            scedule[4][1] = "go to university; have a rest";
-            scedule[5][0] = "Friday";
-            scedule[5][1] = "go to courses;read a book";
-            scedule[6][0] = "Saturday";
-            scedule[6][1] = "have a rest; watch TV;play Playstation";
+    private void generateSchedule() {{
+            schedule[0][0] = "Sunday";
+            schedule[0][1] = "do home work";
+            schedule[1][0] = "Monday";
+            schedule[1][1] = "go to courses; watch a film";
+            schedule[2][0] = "Tuesday";
+            schedule[2][1] = "go to university; have a rest";
+            schedule[3][0] = "Wednesday";
+            schedule[3][1] = "go to courses;listen music";
+            schedule[4][0] = "Thursday";
+            schedule[4][1] = "go to university; have a rest";
+            schedule[5][0] = "Friday";
+            schedule[5][1] = "go to courses;read a book";
+            schedule[6][0] = "Saturday";
+            schedule[6][1] = "have a rest; watch TV;play Playstation";
         }}
 
     public void greetPet()
@@ -63,14 +63,14 @@ public class Human {
         System.out.print("Human{name= '" + this.name+ "', surname= " +this.surname+",year=" +this.year+ ",iq= " + this.iq + ",mother= " + this.mother.name + " " + this.mother.surname +",father= " + this.father.name + " " + this.father.surname +"\npet= ");
         this.pet.toString(pet);
         System.out.println("\nYour Scedule: ");
-        showScedule();
+        showSchedule();
 
     }
 
-    private void showScedule() {
+    private void showSchedule() {
         for (int i = 0; i <7 ; i++) {
             for (int j = 0; j <2 ; j++) {
-                System.out.print(scedule[i][j] + ": ");
+                System.out.print(schedule[i][j] + ": ");
             }
             System.out.println();
         }

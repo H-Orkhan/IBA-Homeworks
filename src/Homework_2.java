@@ -5,19 +5,17 @@ public class Homework_2 {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         char [][] a = new char [5][5];
-        generate_area (a);
+        generateArea (a);
         show(a);
-        int i = random.nextInt((4-0)+1);
-        int j = random.nextInt((4-0)+1);
+        int i = random.nextInt(5);
+        int j = random.nextInt(5);
         char target = a[i][j];
-        while(true)
-        {
-            int line = generate_line();
-            if (check(line))
-                continue;
-            int column = generate_column();
-            if (check (column))
-                continue;
+        while(true) {
+            int line = generateLine();
+            if (check(line))   continue;
+
+            int column = generateColumn();
+            if (check (column))  continue;
 
             a[line-1][column-1] = '*';
             show (a);
@@ -31,24 +29,23 @@ public class Homework_2 {
     private static boolean check(int temp) {
         if (temp <1 || temp >5) {
             System.out.println("Error");
-            return true;
-        }
+            return true;   }
         return false;
     }
 
-    private static int generate_column() {
+    private static int generateColumn() {
         Scanner scanner = new Scanner (System.in);
         System.out.println("Input column");
         return scanner.nextInt();
     }
 
-    private static int generate_line() {
+    private static int generateLine() {
         Scanner scanner = new Scanner (System.in);
         System.out.println("Input line");
         return scanner.nextInt();
     }
 
-    private static void generate_area(char[][] a) {
+    private static void generateArea(char[][] a) {
         for (int i=0;i<5;i++) {
             for (int j = 0; j < 5; j++) {
                 a[i][j] = '-';

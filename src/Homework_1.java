@@ -10,18 +10,22 @@ public class Homework_1 {
         String name = scanner.nextLine();
         System.out.println("Let the game begins!");
         int number = random.nextInt((100) + 1);
+
         for (int i = 0;;i++) {
             System.out.println("Input your number");
             a[i] = scanner.nextInt();
-            if (a[i] <number)
-                System.out.println("Your number is too small. Please, try again.");
-            if (a[i] > number)
-                System.out.println("Your number is too big. Please, try again.");
+
+            if (a[i] <number)    System.out.println("Your number is too small. Please, try again.");
+
+            if (a[i] > number)   System.out.println("Your number is too big. Please, try again.");
+
             if (a[i] == number) {
                 System.out.printf("Congratulations,%s\n", name);
                 count = i + 1;
-                break; } }
-       show (a,count);
+                break;
+            }}
+
+        show (a,count);
         System.out.println("\n*******************Buble sort**************");
         buble_sort(a,count);
         show (a,count);
@@ -34,15 +38,10 @@ public class Homework_1 {
                 if (a[j - 1] < a[j]) {
                     temp = a[j - 1];
                     a[j - 1] = a[j];
-                    a[j] = temp; }}}
-    }
+                    a[j] = temp; }}} }
 
     private static void show(int[] a,int count) {
-        for (int i = 0;i<count;i++)
-        {
+        for (int i = 0;i<count;i++) {
             System.out.printf("%d     ",a[i]);
-        }
-    }
+        }}
 }
-
-

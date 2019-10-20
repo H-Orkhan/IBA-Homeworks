@@ -1,12 +1,11 @@
 import java.util.Scanner;
 public class Homework_3 {
     public static void main(String[] args) {
-        Scanner  scanner = new Scanner (System.in);
         String change = new String ();
         String [][] scedule = new String [7][2];
         generate_scedule(scedule);
         while (true) {
-            change = generate_change();
+            change = generateChange();
                 switch (change) {
                     case "monday":
                         System.out.printf("Your tasks for %s is : %s",scedule [1][0],scedule [1][1]);break;
@@ -26,9 +25,10 @@ public class Homework_3 {
                     System.exit(0);break;
                     default:
                         System.out.println("Sorry, I don't understand you, please try again");
-                } } }
+                } }
+    }
 
-    private static String generate_change() {
+    private static String generateChange() {
         Scanner scanner = new Scanner (System.in);
         System.out.println("\nPlease, input the day of the week:");
         String change = scanner.nextLine();
