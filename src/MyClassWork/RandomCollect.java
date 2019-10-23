@@ -18,14 +18,14 @@ public class RandomCollect {
             else Even.add(integer);
         }
 
-        System.out.println("******ArrayList ******");
-        Random.forEach(System.out::println);
+        System.out.print("ArrayList: ");
+        Random.forEach(item -> { System.out.print(item + " "); });
 
-        System.out.println("******Odd ******");
-        Odd.forEach(System.out::println);
+        System.out.print("\nOdd: ");
+        Odd.forEach(item -> { System.out.print(item + " "); });
 
-        System.out.println("******Even ******");
-        Even.forEach(System.out::println);
+        System.out.print("\nEven: ");
+        Even.forEach(item -> { System.out.print(item + " "); });
 
 
 
