@@ -1,4 +1,4 @@
-package October25;
+package MyClassWork.October25;
 
 import java.util.*;
 import java.util.Random;
