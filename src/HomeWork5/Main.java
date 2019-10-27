@@ -1,6 +1,7 @@
 package HomeWork5;
+
 public class Main {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Family family = new Family();
         family.setPet();
         family.setChild();
@@ -12,7 +13,7 @@ public class Main {
         family.respond();
         family.foul();
 
-        Pet dog = new Pet ();
+        Pet dog = new Pet();
         dog.setSpecies("Dog");
         dog.setNickname("Rax");
         dog.setAge(5);
