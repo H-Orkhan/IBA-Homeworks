@@ -2,7 +2,7 @@ package HomeWork7;
 
 public class Dog extends Pet implements Foul {
 
-    Dog (String nickname, int age, int trickLevel, String habit1, String habit2, String habit3) {
+    Dog(String nickname, int age, int trickLevel, String habit1, String habit2, String habit3) {
         super(nickname, age, trickLevel, habit1, habit2, habit3);
         this.setSpecies(Species.Dog);
     }

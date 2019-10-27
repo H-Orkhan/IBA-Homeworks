@@ -1,11 +1,11 @@
 package HomeWork7;
 
-public abstract class  Pet {
+public abstract class Pet {
     private Species species;
     private String nickname;
     private int age;
     private int trickLevel;
-    private String [] habits;
+    private String[] habits;
 
     public void setSpecies(Species species) {
         this.species = species;
@@ -19,22 +19,23 @@ public abstract class  Pet {
         habits = new String[]{habit1, habit2, habit3};
     }
 
-    Pet(Species species) { species = Species.UNKNOWN;}
+    Pet(Species species) {
+        species = Species.UNKNOWN;
+    }
 
     @Override
-    public String toString()
-    {
-        return this.species + " nickname = " + this.nickname + " age = "+this.age +" trickLevel = "+this.trickLevel+ " habits = " + this.getHabits() ;
+    public String toString() {
+        return this.species + " nickname = " + this.nickname + " age = " + this.age + " trickLevel = " + this.trickLevel + " habits = " + this.getHabits();
     }
 
     private String getHabits() {
-        return habits[0]+" "+habits[1]+ " "+habits[2];
+        return habits[0] + " " + habits[1] + " " + habits[2];
     }
 
     @Override
-    public boolean equals (Object that) {
+    public boolean equals(Object that) {
         if (this == that) return true;
-        if (hashCode(this)!=hashCode(that)) return false;
+        if (hashCode(this) != hashCode(that)) return false;
         if (!(that instanceof Pet)) return false;
         return this.nickname == ((Pet) that).nickname && this.age == ((Pet) that).age && this.species == ((Pet) that).species;
     }
@@ -45,13 +46,13 @@ public abstract class  Pet {
 
     @Override
     protected void finalize() {
-        System.out.println("Object "+this.getClass().getName());
+        System.out.println("Object " + this.getClass().getName());
     }
 
-    void eat()
-    {
+    void eat() {
         System.out.println("I am eating");
     }
+
     abstract void respond();
 
 }
