@@ -1,4 +1,5 @@
 package HomeWork8;
+
 import java.util.HashMap;
 
 public class Human {
@@ -6,16 +7,17 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    private HashMap<DayOfWeek,String> schedule = new HashMap<>();
+    private HashMap<DayOfWeek, String> schedule = new HashMap<>();
 
-    Human() { }
+    Human() {
+    }
 
     private String getSchedule() {
         return String.valueOf(schedule);
     }
 
     void setSchedule(DayOfWeek day, String Task) {
-        schedule.put(day,Task);
+        schedule.put(day, Task);
     }
 
     void setName(String name) {
@@ -34,14 +36,15 @@ public class Human {
         this.iq = iq;
     }
 
-    void greetPet() { }
+    void greetPet() {
+    }
 
 
     @Override
-    public String toString ()
-    {
-        return "Human name = "+this.name+ " surname = "+this.surname+" year = "+this.year+" iq = "+this.iq + " schedule = "+this.getSchedule();
+    public String toString() {
+        return "Human name = " + this.name + " surname = " + this.surname + " year = " + this.year + " iq = " + this.iq + " schedule = " + this.getSchedule();
     }
+
     @Override
     protected void finalize() {
         System.out.println("Object Has been deleted");

@@ -1,8 +1,9 @@
 package HomeWork8;
+
 public enum DayOfWeek {
 
-    MONDAY ,
-    TUESDAY ,
+    MONDAY,
+    TUESDAY,
     WEDNESDAY,
     THURSDAY,
     FRIDAY,

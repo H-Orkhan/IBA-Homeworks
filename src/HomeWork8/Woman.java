@@ -9,7 +9,8 @@ final class Woman extends Human {
     void greetPet() {
         System.out.println("GreetPet method from Woman Class");
     }
-    void makeUp(){
+
+    void makeUp() {
         System.out.println("I have MakeUp");
     }
 }
