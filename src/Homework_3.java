@@ -1,39 +1,49 @@
 import java.util.Scanner;
+
 public class Homework_3 {
     public static void main(String[] args) {
-        String change = new String ();
-        String [][] scedule = new String [7][2];
-        generate_scedule(scedule);
+        String change;
+        String[][] schedule = new String[7][2];
+        generate_scedule(schedule);
         while (true) {
             change = generateChange();
-                switch (change) {
-                    case "monday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [1][0],scedule [1][1]);break;
-                    case "tuesday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [2][0],scedule [2][1]);break;
-                    case "wednesday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [3][0],scedule [3][1]);break;
-                    case "thursday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [4][0],scedule [4][1]);break;
-                    case "friday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [5][0],scedule [5][1]);break;
-                    case "saturday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [6][0],scedule [6][1]);break;
-                    case "sunday":
-                        System.out.printf("Your tasks for %s is : %s",scedule [0][0],scedule [0][1]);break;
-                    case "exit":
-                    System.exit(0);break;
-                    default:
-                        System.out.println("Sorry, I don't understand you, please try again");
-                } }
+            switch (change) {
+                case "monday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[1][0], schedule[1][1]);
+                    break;
+                case "tuesday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[2][0], schedule[2][1]);
+                    break;
+                case "wednesday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[3][0], schedule[3][1]);
+                    break;
+                case "thursday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[4][0], schedule[4][1]);
+                    break;
+                case "friday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[5][0], schedule[5][1]);
+                    break;
+                case "saturday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[6][0], schedule[6][1]);
+                    break;
+                case "sunday":
+                    System.out.printf("Your tasks for %s is : %s", schedule[0][0], schedule[0][1]);
+                    break;
+                case "exit":
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Sorry, I don't understand you, please try again");
+            }
+        }
     }
 
     private static String generateChange() {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nPlease, input the day of the week:");
         String change = scanner.nextLine();
         change = change.toLowerCase();
-        change = change.replace(" ","");
+        change = change.replace(" ", "");
         return change;
     }
 
@@ -52,4 +62,5 @@ public class Homework_3 {
         scedule[5][1] = "go to courses;read a book";
         scedule[6][0] = "Saturday";
         scedule[6][1] = "have a rest; watch TV;play Playstation";
-    }}
+    }
+}
