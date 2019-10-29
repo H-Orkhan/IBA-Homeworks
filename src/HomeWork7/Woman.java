@@ -11,6 +11,6 @@ final class Woman extends Human {
     }
 
     void makeUp() {
-        System.out.println("I have MakeUp");
+        System.out.println("Mother has MakeUp");
     }
 }

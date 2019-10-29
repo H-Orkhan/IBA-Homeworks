@@ -11,6 +11,6 @@ final class Man extends Human {
     }
 
     void repairCar() {
-        System.out.println("I Repair the car");
+        System.out.println("Father repair the car");
     }
 }

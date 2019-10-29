@@ -1,10 +1,10 @@
 package HomeWork7;
 
-public class Dog extends Pet implements Foul {
+public class Dog extends Pet implements Foulable {
 
     Dog(String nickname, int age, int trickLevel, String habit1, String habit2, String habit3) {
         super(nickname, age, trickLevel, habit1, habit2, habit3);
-        this.setSpecies(Species.Dog);
+        this.setSpecies(Species.DOG);
     }
 
     @Override

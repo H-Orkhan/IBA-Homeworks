@@ -12,7 +12,6 @@ public abstract class Pet {
     }
 
     Pet(String nickname, int age, int trickLevel, String habit1, String habit2, String habit3) {
-        this.species = species;
         this.nickname = nickname;
         this.age = age;
         this.trickLevel = trickLevel;
@@ -37,7 +36,7 @@ public abstract class Pet {
         if (this == that) return true;
         if (hashCode(this) != hashCode(that)) return false;
         if (!(that instanceof Pet)) return false;
-        return this.nickname == ((Pet) that).nickname && this.age == ((Pet) that).age && this.species == ((Pet) that).species;
+        return this.nickname.equals(((Pet) that).nickname) && this.age == ((Pet) that).age && this.species == ((Pet) that).species;
     }
 
     private int hashCode(Object pet) {

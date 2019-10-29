@@ -1,10 +1,10 @@
 package HomeWork7;
 
 public enum Species {
-    Fish,
-    DomesticCat,
-    Dog,
-    RoboCat,
+    FISH,
+    DOMESTIC_CAT,
+    DOG,
+    ROBOCAT,
     UNKNOWN
 
 }
