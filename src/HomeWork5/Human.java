@@ -5,29 +5,22 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    private String[][] schedule = new String[7][2];
-
+    private String[][] schedule = new String[][] {{"Monday"," "},{"Tuesday", " "},{"Wednesday", " "},{"Thursday", " "},
+            {"Friday", " "}, {"Saturday", " " } , {"Sunday", " "}};
     Human() {
     }
 
     private String getSchedule() {
-        for (int i = 0; i < 7; i++) {
-            if (schedule[i][1] != null && !(schedule[i][1].equals("null"))) {
-                return schedule[i][0] + " " + schedule[i][1];
+        for (String[] strings : schedule) {
+            if (!strings[1].equals(" ")) {
+                return strings[0] + " " + strings[1];
             }
         }
-        return null;
+        return "Something is wrong";
     }
 
-    void setSchedule(int i, String Task) {
-        schedule[0][0] = "Sunday";
-        schedule[1][0] = "Monday";
-        schedule[2][0] = "Tuesday";
-        schedule[3][0] = "Wednesday";
-        schedule[4][0] = "Thursday";
-        schedule[5][0] = "Friday";
-        schedule[6][0] = "Saturday";
-        schedule[i - 1][1] = Task;
+    void setSchedule(int day, String Task) {
+        schedule[day - 1][1] = Task;
     }
 
     void setName(String name) {

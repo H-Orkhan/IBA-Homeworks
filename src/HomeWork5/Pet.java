@@ -5,7 +5,7 @@ public class Pet {
     private String nickname;
     private int age;
     private int trickLevel;
-    private String[] habits;
+    private String [] habits = new String [10];
 
     Pet() {
     }
@@ -41,8 +41,8 @@ public class Pet {
     }
 
 
-    void setHabits(String habit1, String habit2, String habit3) {
-        habits = new String[]{habit1, habit2, habit3};
+    void setHabits(String [] habit) {
+        this.habits = habit.clone();
     }
 
     @Override

@@ -8,19 +8,16 @@ public class Family {
     private int count = 0;
     private static int temp = 0;
 
-    Family() {
-        setMother();
-        setFather();
-    }
+    Family() { }
 
-    void setChild() {
+    void setChild(String name,String surname,int year,int iq,int day,String task) {
         count++;
         Human child = new Human();
-        child.setName("Orkhan");
-        child.setSurname("Hashimov");
-        child.setIq(115);
-        child.setYear(2000);
-        child.setSchedule(1, "Go to university");
+        child.setName(name);
+        child.setSurname(surname);
+        child.setIq(iq);
+        child.setYear(year);
+        child.setSchedule(day, task);
         addChild(child);
     }
 
@@ -35,33 +32,33 @@ public class Family {
         count--;
     }
 
-    private void setMother() {
+     void setMother(String name,String surname,int year,int iq,int day,String task) {
         count++;
         mother = new Human();
-        mother.setName("Aida");
-        mother.setSurname("Hashimova");
-        mother.setYear(1970);
-        mother.setIq(110);
-        mother.setSchedule(7, "Have a rest");
+        mother.setName(name);;
+        mother.setSurname(surname);
+        mother.setYear(year);
+        mother.setIq(iq);
+        mother.setSchedule(day, task);
     }
 
-    private void setFather() {
+    void setFather(String name, String surname, int year, int iq, int day, String task) {
         count++;
         father = new Human();
-        father.setName("Ruslan");
-        father.setSurname("Hashimov");
-        father.setYear(1970);
-        father.setIq(110);
-        father.setSchedule(6, "Go to football");
+        father.setName(name);
+        father.setSurname(surname);
+        father.setYear(year);
+        father.setIq(iq);
+        father.setSchedule(day, task);
     }
 
-    void setPet() {
+    void setPet(String nickname,String species,int age,int trickLevel,String [] habits) {
         pet = new Pet();
-        pet.setNickname("John");
-        pet.setSpecies("Dog");
-        pet.setAge(5);
-        pet.setTrickLevel(75);
-        pet.setHabits("play", "eat", "sleep");
+        pet.setNickname(nickname);
+        pet.setSpecies(species);
+        pet.setAge(age);
+        pet.setTrickLevel(trickLevel);
+        pet.setHabits(habits);
     }
 
     @Override

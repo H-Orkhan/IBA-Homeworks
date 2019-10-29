@@ -3,9 +3,11 @@ package HomeWork5;
 public class Main {
     public static void main(String[] args) {
         Family family = new Family();
-        family.setPet();
-        family.setChild();
-        family.setChild();
+        family.setPet("Rax","Dog",5,75, new String[]{"eat", "sleep", "play"});
+        family.setFather("Ruslan","Hashimov",1970,115,6,"Have a rest");
+        family.setMother("Aida","Hashimova",1970,115,7,"Have a rest");
+        family.setChild("Orkhan","Hashimov",2000,110,1,"Go to university");
+        family.setChild("Somebody","Somebody",2005,150,3,"Have a rest");
         family.deleteChild(1);
         System.out.println(family.toString());
 
