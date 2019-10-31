@@ -1,8 +1,8 @@
 package HomeWork8;
 
 final class Woman extends Human {
-    Woman() {
-        super();
+    Woman(String name,String surname,int year,int iq,String day,String task) {
+        super(name,surname,year,iq,day,task);
         System.out.println("object of Woman class has been created");
     }
 
@@ -11,7 +11,6 @@ final class Woman extends Human {
     }
 
     void makeUp() {
-        System.out.println("I have MakeUp");
-
+        System.out.println("Mother has MakeUp");
     }
 }

@@ -3,69 +3,46 @@ package HomeWork8;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Family {
-    private Woman mother;
-    private Man father;
-    private ArrayList<Human> children = new ArrayList<>();
-    private HashSet<Pet> pets = new HashSet<>();
+public class Family{
+    public int countFamily;
+    public int temp;
+    protected Woman mother;
+    protected Man father;
+    protected ArrayList<Human> children = new ArrayList<>();
+    private HashSet<Pet> pet = new HashSet<>();
     private int count = 0;
 
-    Family() {
-        setMother();
-        setFather();
+
+    Family(Woman mother,Man father) {
+        count = 2;
+        this.mother = mother;
+        this.father = father;
     }
 
-    void setPet(Pet pet) {
-        pets.add(pet);
-    }
-
-    void setChild() {
+    void addChild(Human child) {
         count++;
-        Human child = new Human();
-        child.setName("Orkhan");
-        child.setSurname("Hashimov");
-        child.setIq(115);
-        child.setYear(2000);
-        child.setSchedule(DayOfWeek.MONDAY, "Go to university");
         children.add(child);
     }
 
-    void deleteChild(int i) {
-        count--;
+    void deleteChild(Human i) {
         children.remove(i);
-    }
-
-    private void setMother() {
-        count++;
-        mother = new Woman();
-        mother.setName("Aida");
-        mother.setSurname("Hashimova");
-        mother.setYear(1970);
-        mother.setIq(110);
-        mother.setSchedule(DayOfWeek.SUNDAY, "Have a rest");
-        mother.makeUp();
-
-    }
-
-    private void setFather() {
-        count++;
-        father = new Man();
-        father.setName("Ruslan");
-        father.setSurname("Hashimov");
-        father.setYear(1970);
-        father.setIq(110);
-        father.setSchedule(DayOfWeek.SATURDAY, "Go to football");
-        father.repairCar();
+        count--;
     }
 
     @Override
     public String toString() {
-        return "Family has " + this.count + " persons:" + "\nfather " + this.father.toString() + "\nmother: " + this.mother.toString() + "\nchildren: " + this.children.toString() + "\npet: " + pets.toString();
+        return "Family has " + this.count + " persons:" + "\nfather " + this.father.toString() + "\nmother: " + this.mother.toString() + "\nchildren: " + this.children.toString() + "\npet: " + pet.toString();
     }
 
+    public void addPet(Pet pet) {
+        this.pet.add(pet);
+    }
     @Override
     protected void finalize() {
-        System.out.println("Object " + this.getClass().getName());
+        System.out.println("Object "+this.getClass().getName());
     }
 
+    public int countFamily() {
+        return count;
+    }
 }

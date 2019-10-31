@@ -1,6 +1,7 @@
 package HomeWork8;
 
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public abstract class Pet {
@@ -29,7 +30,8 @@ public abstract class Pet {
 
     @Override
     public String toString() {
-        return this.species + " nickname = " + this.nickname + " age = " + this.age + " trickLevel = " + this.trickLevel + " habits = " + this.getHabits();
+        return this.species + " nickname = " + this.nickname + " age = " + this.age + " trickLevel = "
+                + this.trickLevel + " habits = " + this.getHabits();
     }
 
     private String getHabits() {
@@ -41,7 +43,8 @@ public abstract class Pet {
         if (this == that) return true;
         if (hashCode(this) != hashCode(that)) return false;
         if (!(that instanceof Pet)) return false;
-        return this.nickname == ((Pet) that).nickname && this.age == ((Pet) that).age && this.species == ((Pet) that).species;
+        return this.nickname.equals(((Pet) that).nickname) && this.age == ((Pet) that).age
+                && this.species == ((Pet) that).species;
     }
 
     private int hashCode(Object pet) {

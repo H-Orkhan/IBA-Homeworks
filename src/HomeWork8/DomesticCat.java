@@ -3,7 +3,7 @@ package HomeWork8;
 public class DomesticCat extends Pet implements Foul {
 
     DomesticCat(String nickname, int age, int trickLevel, String habit1, String habit2, String habit3) {
-        super(nickname, age, trickLevel, habit1, habit2, habit3);
+        super(nickname, age, trickLevel, habit1,habit2,habit3);
         this.setSpecies(Species.DomesticCat);
     }
 
