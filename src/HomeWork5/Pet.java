@@ -10,6 +10,14 @@ public class Pet {
     Pet() {
     }
 
+    public Pet(String species, String nickname , int age, int trickLevel, String[] habit) {
+        this.species= species;
+        this.nickname=nickname;
+        this.age=age;
+        this.trickLevel = trickLevel;
+        this.habits = habit.clone();
+    }
+
     void setSpecies(String species) {
         this.species = species;
     }
@@ -40,10 +48,6 @@ public class Pet {
         return habits[0] + " " + habits[1] + " " + habits[2];
     }
 
-
-    void setHabits(String [] habit) {
-        this.habits = habit.clone();
-    }
 
     @Override
     public boolean equals(Object that) {

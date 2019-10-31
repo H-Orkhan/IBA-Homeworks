@@ -8,20 +8,14 @@ public class Family {
     private int count = 0;
     private static int temp = 0;
 
-    Family() { }
-
-    void setChild(String name,String surname,int year,int iq,int day,String task) {
-        count++;
-        Human child = new Human();
-        child.setName(name);
-        child.setSurname(surname);
-        child.setIq(iq);
-        child.setYear(year);
-        child.setSchedule(day, task);
-        addChild(child);
+    Family(Human mother,Human father) {
+        count = 2;
+        this.mother = mother;
+        this.father = father;
     }
 
-    private void addChild(Human child) {
+    public void addChild(Human child) {
+        count++;
         children[temp] = child;
         temp++;
     }
@@ -30,35 +24,6 @@ public class Family {
         if (temp + 1 - i >= 0) System.arraycopy(children, i + 1, children, i, temp + 1 - i);
         temp--;
         count--;
-    }
-
-     void setMother(String name,String surname,int year,int iq,int day,String task) {
-        count++;
-        mother = new Human();
-        mother.setName(name);;
-        mother.setSurname(surname);
-        mother.setYear(year);
-        mother.setIq(iq);
-        mother.setSchedule(day, task);
-    }
-
-    void setFather(String name, String surname, int year, int iq, int day, String task) {
-        count++;
-        father = new Human();
-        father.setName(name);
-        father.setSurname(surname);
-        father.setYear(year);
-        father.setIq(iq);
-        father.setSchedule(day, task);
-    }
-
-    void setPet(String nickname,String species,int age,int trickLevel,String [] habits) {
-        pet = new Pet();
-        pet.setNickname(nickname);
-        pet.setSpecies(species);
-        pet.setAge(age);
-        pet.setTrickLevel(trickLevel);
-        pet.setHabits(habits);
     }
 
     @Override
@@ -87,4 +52,7 @@ public class Family {
     }
 
 
+    public void addPet(Pet pet) {
+        this.pet=pet;
+    }
 }
