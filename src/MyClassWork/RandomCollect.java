@@ -27,8 +27,6 @@ public class RandomCollect {
         System.out.print("\nEven: ");
         Even.forEach(item -> { System.out.print(item + " "); });
 
-
-
     }
 
 }

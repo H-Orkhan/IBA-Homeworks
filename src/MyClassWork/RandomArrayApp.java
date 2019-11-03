@@ -20,7 +20,6 @@ public class RandomArrayApp {
             else if (array[i]%3 == 0){
                 System.out.println("buzz");
             }
-
             else {
                 System.out.println();
             }

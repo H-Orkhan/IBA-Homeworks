@@ -16,6 +16,8 @@ public class Human {
     public Human(String name, String surname) {
         this.name = name;
         this.surname = surname;
+        this.year = 1970;
+        this.iq = 115;
     }
 
     public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father) {
@@ -29,8 +31,7 @@ public class Human {
         generateSchedule();
     }
 
-    private void generateSchedule() {
-        {
+    private void generateSchedule() { {
             schedule[0][0] = "Sunday";
             schedule[0][1] = "do home work";
             schedule[1][0] = "Monday";
@@ -61,20 +62,42 @@ public class Human {
         System.out.println("\nI have a [" + this.pet.species + "] he is [" + this.pet.age + "] years old, he is [" + trickLevel(this.pet));
     }
 
-    public void toString(Pet pet) {
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", year=" + year +
+                ", iq=" + iq +
+                ", pet=" + pet +
+                ", mother=" + mother +
+                ", father=" + father +
+                "  schedule= " + showSchedule() +
+                '}';
+    }
+
+    public String toString (int a) {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' + '}';
+    }
+
+
+   /* public void toString(Pet pet) {
         System.out.print("Human{name= '" + this.name + "', surname= " + this.surname + ",year=" + this.year + ",iq= " + this.iq + ",mother= " + this.mother.name + " " + this.mother.surname + ",father= " + this.father.name + " " + this.father.surname + "\npet= ");
         this.pet.toString(pet);
         System.out.println("\nYour Schedule: ");
         showSchedule();
 
-    }
+    }*/
 
-    private void showSchedule() {
+    private String showSchedule() {
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 2; j++) {
-                System.out.print(schedule[i][j] + ": ");
+                return schedule[i][j] + ": ";
             }
             System.out.println();
         }
+        return null;
     }
 }

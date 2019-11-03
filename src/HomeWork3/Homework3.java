@@ -1,6 +1,8 @@
+package HomeWork3;
+
 import java.util.Scanner;
 
-public class Homework_3 {
+public class Homework3 {
     public static void main(String[] args) {
         String change;
         String[][] schedule = new String[7][2];

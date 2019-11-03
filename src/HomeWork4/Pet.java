@@ -7,8 +7,7 @@ public class Pet {
     int trickLevel;
     static String[] habits = new String[]{"eat", "drink", "sleep"};
 
-    public Pet() {
-    }
+    public Pet() { }
 
     public Pet(String species, String nickname) {
         this.species = species;
@@ -23,6 +22,16 @@ public class Pet {
         toString();
     }
 
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "species='" + species + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", age=" + age +
+                ", trickLevel=" + trickLevel +
+                '}';
+    }
+
     public void eat() {
         System.out.println("I am eating");
     }
@@ -35,7 +44,4 @@ public class Pet {
         System.out.println("I need to cover it up");
     }
 
-    public void toString(Pet Dog) {
-        System.out.printf("%s{nickname='%s', age=%d, trickLevel=%d, habits=[%s,%s,%s]}", species, nickname, age, trickLevel, habits[0], habits[1], habits[2]);
-    }
 }

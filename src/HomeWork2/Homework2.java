@@ -1,7 +1,9 @@
+package HomeWork2;
+
 import java.util.Scanner;
 import java.util.Random;
 
-public class Homework_2 {
+public class Homework2 {
     public static void main(String[] args) {
         Random random = new Random();
         char[][] a = new char[5][5];
