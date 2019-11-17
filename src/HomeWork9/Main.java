@@ -20,8 +20,6 @@ public class Main {
         familyController.adoptChild(familyController.getFamilyById(0),child1);
         familyController.getPets(0);
 
-        String str = familyController.getFamilyById(0).toString();
-        System.out.println(str);
         /*Creating Family Number2 */
 
         Man father2 = new Man("fatherName2", "fatherSurname2", 1960, 125, "Wednesday", "Go to store");
@@ -30,7 +28,6 @@ public class Main {
         familyController.createNewFamily(mother2,father2);
         familyController.addPet(1,catDomestic);
         familyController.bornChild(familyController.getFamilyById(1),"BoyName","GirlName");
-        familyController.adoptChild(familyController.getFamilyById(1),child2);
         familyController.getPets(1);
 
          System.out.println("getFamiliesLessThan(2) = " + familyController.getFamiliesLessThan(2));
