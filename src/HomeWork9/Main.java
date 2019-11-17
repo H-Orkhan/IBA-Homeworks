@@ -9,9 +9,9 @@ public class Main {
 
         /*Creating Family Number 1*/
 
-        Man father1 = new Man("father1", "father1", 1970, 115, "Monday", "Have a rest");
-        Woman mother1 = new Woman("mother1", "mother1", 1970, 115, "Tuesday", "Have a rest");
-        Human child1 = new Human("Adopted1","Adopted1",2010,120,"Friday","Go to Course");
+        Man father1 = new Man("fatherName1", "fatherSurname1", 1970, 115, "Monday", "Have a rest");
+        Woman mother1 = new Woman("motherName1", "motherSurname1", 1970, 115, "Tuesday", "Have a rest");
+        Human child1 = new Human("AdoptedName1","AdoptedSurname1",2010,120,"Friday","Go to Course");
         familyController.createNewFamily(mother1,father1);
 
         familyController.addPet(0,dog);
@@ -24,12 +24,12 @@ public class Main {
         System.out.println(str);
         /*Creating Family Number2 */
 
-        Man father2 = new Man("father2", "father2", 1960, 125, "Wednesday", "Go to store");
-        Woman mother2 = new Woman("mother2", "mother2", 1965, 115, "Thursday", "Go to work");
-        Human child2 = new Human("AdoptedBoy2","AdoptedBoy2",2010,120,"Friday","Go to Course");
+        Man father2 = new Man("fatherName2", "fatherSurname2", 1960, 125, "Wednesday", "Go to store");
+        Woman mother2 = new Woman("motherName2", "motherSurname2", 1965, 115, "Thursday", "Go to work");
+        Human child2 = new Human("AdoptedName2","AdoptedSurname2",2010,120,"Friday","Go to Course");
         familyController.createNewFamily(mother2,father2);
         familyController.addPet(1,catDomestic);
-        familyController.bornChild(familyController.getFamilyById(1),"Boy","Girl");
+        familyController.bornChild(familyController.getFamilyById(1),"BoyName","GirlName");
         familyController.adoptChild(familyController.getFamilyById(1),child2);
         familyController.getPets(1);
 

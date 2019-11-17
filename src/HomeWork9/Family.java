@@ -7,7 +7,7 @@ public class Family {
     public int temp;
     protected Human mother;
     protected Human father;
-    protected ArrayList<Human> children = new ArrayList<>();
+    private ArrayList<Human> children = new ArrayList<>();
     private HashSet<Pet> pet = new HashSet<>();
     private int count = 0;
 
@@ -47,7 +47,7 @@ public class Family {
                 "\nchildren: " + this.children.toString() + "\npet: " + pet.toString();
     }
 
-    public HashSet<Pet> showPets() {
+    HashSet<Pet> showPets() {
         return this.pet;
     }
 
@@ -60,7 +60,7 @@ public class Family {
         System.out.println("Object " + this.getClass().getName());
     }
 
-    public int countFamily() {
+    int countFamily() {
         return count;
     }
 }

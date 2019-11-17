@@ -1,12 +1,18 @@
 package HomeWork1;
 
+import sun.util.resources.LocaleData;
+
+import java.time.Month;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.Random;
+import  java.time.LocalDateTime;
 
 public class Homework1 {
     public static void main(String[] args) {
         int[] a = new int[101];
         int count = 0;
+
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input your name: ");

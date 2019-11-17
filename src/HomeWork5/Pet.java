@@ -7,8 +7,6 @@ public class Pet {
     private int trickLevel;
     private String [] habits = new String [10];
 
-    Pet() {
-    }
 
     public Pet(String species, String nickname , int age, int trickLevel, String[] habit) {
         this.species= species;

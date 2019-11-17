@@ -8,16 +8,16 @@ public class FamilyService {
     CollectionFamilyDao collectionFamilyDao = new CollectionFamilyDao();
     int index = 1;
 
-    public List<Family> getAllFamilies() {
+    List<Family> getAllFamilies() {
         return collectionFamilyDao.getAllFamilies();
     }
 
-    public String displayAllFamilies() {
+    String displayAllFamilies() {
         System.out.println(collectionFamilyDao.getAllFamilies().toString());
         return  collectionFamilyDao.getAllFamilies().toString();
     }
 
-    public int getFamiliesBiggerThan(int count) {
+    int getFamiliesBiggerThan(int count) {
         int temp = 0;
         for (int i = 0; i < collectionFamilyDao.getAllFamilies().size(); i++) {
             if (count < collectionFamilyDao.getFamilyByIndex(i).countFamily()){
@@ -26,7 +26,7 @@ public class FamilyService {
             return temp;
     }
 
-    public int getFamiliesLessThan(int count) {
+    int getFamiliesLessThan(int count) {
         int temp = 0;
         for (int i = 0; i < collectionFamilyDao.getAllFamilies().size(); i++) {
             if (count > collectionFamilyDao.getFamilyByIndex(i).countFamily()){
@@ -37,7 +37,7 @@ public class FamilyService {
     }
 
 
-    public int countFamiliesWithMemberNumber(int count) {
+    int countFamiliesWithMemberNumber(int count) {
         int temp = 0;
         for (int i = 0; i < collectionFamilyDao.getAllFamilies().size(); i++) {
             if (count == collectionFamilyDao.getFamilyByIndex(i).countFamily()) {
@@ -48,16 +48,19 @@ public class FamilyService {
         return temp;
     }
 
-    public boolean createNewFamily(Human obj1, Human obj2) {
+
+    boolean createNewFamily(Human obj1, Human obj2) {
         Family newFamily = new Family(obj1, obj2);
         return collectionFamilyDao.saveFamily(newFamily);
     }
 
-    public boolean deleteFamilyByIndex(int index) {
+    boolean deleteFamilyByIndex(int index) {
         return collectionFamilyDao.deleteFamily(index);
     }
+    boolean deleteFamily(Family family) {return collectionFamilyDao.deleteFamily(family);}
 
-    public void bornChild(Family family, String boyName, String girlName) {
+
+    void bornChild(Family family, String boyName, String girlName) {
         int iq = 115;
         int year = 2000;
         boolean Boy = new Random().nextBoolean();
@@ -70,7 +73,7 @@ public class FamilyService {
         }
     }
 
-    public void adoptChild(Family family, Human human) {
+    void adoptChild(Family family, Human human) {
         family.addChild(human);
         collectionFamilyDao.updateFamily(family);
     }
@@ -80,9 +83,10 @@ public class FamilyService {
         return collectionFamilyDao.getAllFamilies().size();
     }
 
-   public boolean deleteFamily (Family family) { return collectionFamilyDao.deleteFamily(family); }
 
-    public HashSet<Pet> getPets(int index) { return collectionFamilyDao.getFamilyByIndex(index).showPets(); }
+
+
+    HashSet<Pet> getPets(int index) { return collectionFamilyDao.getFamilyByIndex(index).showPets(); }
 
     public boolean addPet(int index, Pet pet) {
         return collectionFamilyDao.getFamilyByIndex(index).addPet(pet);
